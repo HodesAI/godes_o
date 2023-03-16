@@ -1,0 +1,103 @@
+import numpy as np
+
+# Завдання 1.1
+arr1_1 = np.array([[1.2, 2.3, 3.4, 4.5], [5.6, 6.7, 7.8, 8.9], [9.0, 10.1, 11.2, 12.3]])
+print("arr1_1:")
+print(arr1_1)
+
+# Завдання 1.2
+arr1_2 = np.array(['apple', 'banana', 'orange', 'pear', 'kiwi'])
+print("\narr1_2:")
+print(arr1_2)
+
+# Завдання 1.3
+arr1_3 = np.identity(3, dtype=float)
+print("\narr1_3:")
+print(arr1_3)
+
+
+# Завдання 2.1
+arr2_1 = np.zeros((3, 1, 3), dtype=bool)
+print("arr2_1:")
+print(arr2_1)
+
+# Завдання 2.2
+arr2_2 = arr2_1.squeeze().astype(int)
+print("\narr2_2:")
+print(arr2_2)
+
+# Завдання 2.3
+arr2_3 = np.arange(10, 22, 2).reshape(2, 3)
+print("\narr2_3:")
+print(arr2_3)
+
+
+# Завдання 3.1
+arr3_1 = np.random.normal(loc=55, scale=15, size=(4, 5))
+arr3_1 = np.round(np.clip(arr3_1, 10, 100), 2)
+print("arr3_1:")
+print(arr3_1)
+
+# Завдання 3.2
+el3_2 = arr3_1[1, 2]
+print("\nel3_2:")
+print(el3_2)
+
+# Завдання 3.3
+vect3_3 = arr3_1[1, :]
+print("\nvect3_3:")
+print(vect3_3)
+
+# Завдання 3.4
+vect3_4 = arr3_1[:, 2]
+print("\nvect3_4:")
+print(vect3_4)
+
+# Завдання 3.5
+mat3_5 = arr3_1[1:3, 1:3]
+print("\nmat3_5:")
+print(mat3_5)
+
+# ЗАВДАННЯ 4.1
+mat4_1 = np.random.randint(100, 201, size=(6, 6))
+print("mat4_1:")
+print(mat4_1)
+
+# ЗАВДАННЯ 4.2
+diag4_2 = np.diag(mat4_1)
+print("diag4_2:")
+print(diag4_2)
+
+# ЗАВДАННЯ 4.3
+trans4_3 = np.transpose(mat4_1)
+print("trans4_3:")
+print(trans4_3)
+
+# ЗАВДАННЯ 4.4
+inv4_4 = np.linalg.inv(mat4_1)
+print("inv4_4:")
+print(inv4_4)
+
+# Завдання 5.1
+mat5_1 = np.array([[2, 4, 6], [1, 7, 5], [3, 8, 2]])
+mat5_2 = np.array([[3, 5, 1], [6, 2, 7], [8, 1, 4]])
+print(np.dot(mat5_1, mat5_2))
+
+# Завдання 5.2
+mat5_3 = np.array([1, 2, 3])
+mat5_4 = np.diag(mat5_3)
+print(np.dot(mat5_1, mat5_4))
+
+# Завдання 5.3
+mat5_5 = np.transpose(mat5_1)
+print(np.dot(mat5_5, mat5_1))
+
+# Завдання 5.4
+diag_mat5_3 = np.diag(mat5_3)
+mat5_4 = np.multiply(mat5_1, diag_mat5_3[:mat5_1.shape[0], :mat5_1.shape[1]])
+print(mat5_4)
+
+# Завдання 5.5
+mat5_6 = np.array([[1, 2], [3, 4]])
+mat5_7 = np.linalg.inv(mat5_6)
+print(mat5_7)
